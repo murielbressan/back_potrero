@@ -25,20 +25,15 @@
             <div class="container d-flex h-100 align-items-center">
               <div class="col-4">
                 <div class="text-left">
-                    <h1 class="my-0 txt-black mb-4">login</h1>
-                    <form method="post" action="loguearse.php" >
-                      <input type="text" name="dni" class="form-control mb-4" placeholder="DNI" id="name">
-                      <input type="password" name="password" class="form-control mb-2" placeholder="Contraseña" id="password">
-                      <div class="mb-1">
-                      <?php
-                         if(isset($_GET["fallo"]) && $_GET["fallo"] == 'true')
-                         {
-                         echo "<div style='color:red'>Usuario o contraseña invalido </div>";
-                       }
-                     ?>
-                    </div>
-                      <button type="submit" class="btn btn-login btn-block">Ingresar</button>
-                      <p><h5> No tenés cuenta? <span> <a href="registrarse.php">Registrate.</a></span></h5></p>
+                    <h1 class="my-0 txt-black mb-4">Registro</h1>
+                    <form method="post" action="registro.php">
+                      <input type="text" class="form-control mb-4" placeholder="Nombre" name="nombre" id="name">
+                      <input type="text" class="form-control mb-4" placeholder="Apellido" name="apellido" id="apellido">
+                      <input type="number" class="form-control mb-4" placeholder="DNI" name="dni" id="dni">
+                      <input type="text" class="form-control mb-4" placeholder="Correo" name="email" id="email">
+                      <input type="password" class="form-control mb-4" placeholder="Contraseña" name="password" id="password">
+                      <input type="password" class="form-control mb-4" placeholder="Contraseña" name="password2" id="password2">
+                      <button type="submit" name="submit" class="btn btn-login btn-block">Enviar</button>
                     </form>
                 </div>
               </div>
